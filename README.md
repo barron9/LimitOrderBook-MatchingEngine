@@ -8,18 +8,17 @@
 ## Benchmarks
 
 Benchmark methodology explained [here](https://github.com/jxm35/LimitOrderBook-MatchingEngine/wiki/Design-Document#213-benchmarking).
-In a [simulation of market trading](https://github.com/jxm35/LimitOrderBook-MatchingEngine/wiki/Design-Document#23-market-simulation) the application was able to place and match orders at an average rate of <strong>2.4 Million orders per second</strong>.
+In a [simulation of market trading](https://github.com/jxm35/LimitOrderBook-MatchingEngine/wiki/Design-Document#23-market-simulation) the application was able to place and match orders at an average rate of <strong>14 Million orders per second</strong>.
 
 | Function | Time (ns) | Implied rate per second |
 | --- | --- | --- |
-| Get Order | 21.2 | 47,139,000 |
-| Get Best Bid Price | 20.4 | 49,000,000 |
-| Place Limit Order | 343 | 2,915,000 |
-| Place Limit Order (New Price Level) | 430 | 2,327,000 |
-| Place Market Order | 25.7 | 38,899,000 |
-| Remove Order | 88.2 | 11,340,000 |
-| Match Orders (uncrossed) | 24.0 | 41,624,000 |
-| Match Orders (crossed) | 140 | 7,151,000 |
+| Get Order | 17.7 | 56,642,000 |
+| Get Best Bid Price | 17.6 | 56,665,000 |
+| Place Limit Order (New Price Level) | 81.7 | 12,238,000 |
+| Place Limit Order (Existing Price Level) | 73.4 | 13,615,000 |
+| Place Market Order (Crossing Single Bid) | 43.0 | 23,257,000 |
+| Place Market Order (Crossing 3 Bids) | 116.0 | 8,634,000 |
+| Remove Order | 74.0 | 13,506,000 |
 
 
 ## Features
